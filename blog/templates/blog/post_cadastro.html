@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+            <h1><a href="{% url 'post_detailcadastro' pk=post.pk %}">{{ post.nome }}</a></h1>
+            <p>{{ post.cidade|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+
+
+    <div class="container mt-4 text-center">
+        <a href="{% url 'post_newcadastro' %}" class="btn btn-default">NOVO CADASTRO</a>
+    </div>
+
+{% endblock content %}
