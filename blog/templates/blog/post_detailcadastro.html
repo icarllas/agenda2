@@ -8,6 +8,8 @@
                 {{ post.published_date }}
             </div>
         {% endif %}
+        <a class="btn btn-default" href="{% url 'post_editcadastro' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href="{% url 'post_remove2' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         <h3>{{ post.nome }}</h3>
         <h3>{{ post.cidade|linebreaksbr }}</h3>
         <h3>{{ post.estado|linebreaksbr }}</h3>

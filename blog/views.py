@@ -110,3 +110,8 @@ def post_editcadastro(request, pk):
     else:
         form = PostCadastroForm(instance=post)
     return render(request, 'blog/post_newcadastro.html', {'form': form})
+
+def post_remove2(request, pk):
+    post = get_object_or_404(PostCadastro, pk=pk)
+    post.delete()
+    return redirect('post_cadastro')

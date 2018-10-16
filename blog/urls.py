@@ -12,5 +12,7 @@ urlpatterns = [
     path('post/cadastro/', views.post_cadastro, name='post_cadastro'),
     path('post/newcadastro', views.post_newcadastro, name='post_newcadastro'),
     path('post/<int:pk>/detail', views.post_detailcadastro, name='post_detailcadastro'),
-    path('post/<int:pk>/editcadastro/', views.post_editcadastro, name='post_editcadastro'),
+    path('post/<int:pk>/detail/editcadastro/', views.post_editcadastro, name='post_editcadastro'),
+    path(r'^post/(?P<pk>\d+)/detail/remove/$', views.post_remove2, name='post_remove2'),
+
 ]
